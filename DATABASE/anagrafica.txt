@@ -1,0 +1,30 @@
+Cognome	Nome	Matricola	MatricePredefinita	Foto
+Alaimo	Dorella	1		
+Canino	Gaetana	2		
+Canzoneri	Domenica	3		
+Carbone	Maria Rita	4		
+Carollo	Maria	5		
+Conti	Rosaria	6		
+Conti	V	7		
+Cottone	Francesco	8		
+Custode	Franca Maria	9		
+Di Marco	Fortunata	10		
+Di Scafani	Francesco	11		
+Eroe	Elvira	12		
+Farinella		13		
+Giglio	Nicola	14		
+Graziano	Lorenza	15		
+Guarino	Domenica	16		
+Guarino	Filomena	17		
+La Barbera	Santino	18		
+La Barbera	Maria Carmela	19		
+Macagnone	Francesca	20		
+Pomara	Nunzio	21		
+Raia	Alfonsa	22		
+Randazzo	Giuseppe	23		
+Ribaudo	Giacomo	24		
+Roccaforte	Carolina	25		
+Saglimbeni	Massimiliano	26		
+Sblandi	Vincenza	27		
+Scozzari	Giuseppina	28		
+Tripi	Elisa	29		

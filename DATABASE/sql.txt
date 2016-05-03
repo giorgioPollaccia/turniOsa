@@ -1,0 +1,6 @@
+select 
+    operatore_matriceturni.matricola, operatore_matriceturni.progressivo, operatore_matriceturni.idmatrice, matriceturni.progressivo, lun, mar, mer, gio, ven, sab, dom
+from operatore_matriceturni 
+inner join matriceturni on matriceturni.idmatrice=operatore_matriceturni.idmatrice and  matriceturni.progressivo= operatore_matriceturni.progressivo +1
+inner join disponibilita on operatore_matriceturni.matricola=disponibilita.matricola 
+where operatore_matriceturni.progressivo and disponibilita.data="04/02/2016"
