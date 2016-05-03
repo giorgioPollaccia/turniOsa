@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>formCaricaTurnoDaExcel</class>
+ <widget class="QWidget" name="formCaricaTurnoDaExcel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>495</width>
+    <height>314</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>495</width>
+    <height>314</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>495</width>
+    <height>314</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Carica turno da foglio excel.</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QPushButton" name="pbCaricaTurnoDaExcel">
+     <property name="text">
+      <string>Carica un turno da floglio excel</string>
+     </property>
+     <property name="autoDefault">
+      <bool>true</bool>
+     </property>
+     <property name="default">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>La struttura del foglio excel deve essere del tipo seguente:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QTableWidget" name="tableWidget">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>8</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+     <attribute name="horizontalHeaderDefaultSectionSize">
+      <number>70</number>
+     </attribute>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>false</bool>
+     </attribute>
+     <attribute name="verticalHeaderVisible">
+      <bool>false</bool>
+     </attribute>
+     <row>
+      <property name="text">
+       <string>11000</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>New Row</string>
+      </property>
+     </row>
+     <row>
+      <property name="text">
+       <string>Caio</string>
+      </property>
+     </row>
+     <column>
+      <property name="text">
+       <string>Matricola</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Cognome</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Nome</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>gg/mm/aa</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>gg/mm/aa</string>
+      </property>
+     </column>
+     <item row="0" column="0">
+      <property name="text">
+       <string/>
+      </property>
+     </item>
+     <item row="0" column="3">
+      <property name="text">
+       <string>06/11/2014</string>
+      </property>
+     </item>
+     <item row="0" column="4">
+      <property name="text">
+       <string>07/11/2014</string>
+      </property>
+     </item>
+     <item row="1" column="3">
+      <property name="text">
+       <string>lun</string>
+      </property>
+     </item>
+     <item row="1" column="4">
+      <property name="text">
+       <string>mar</string>
+      </property>
+     </item>
+     <item row="2" column="0">
+      <property name="text">
+       <string>10000</string>
+      </property>
+     </item>
+     <item row="2" column="1">
+      <property name="text">
+       <string>Tizio</string>
+      </property>
+     </item>
+     <item row="2" column="2">
+      <property name="text">
+       <string>Caio</string>
+      </property>
+     </item>
+     <item row="2" column="3">
+      <property name="text">
+       <string>M</string>
+      </property>
+     </item>
+     <item row="2" column="4">
+      <property name="text">
+       <string>P</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

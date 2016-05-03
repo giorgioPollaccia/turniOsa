@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>871</width>
+    <height>604</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TurniOSA</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="_2">
+    <property name="leftMargin">
+     <number>2</number>
+    </property>
+    <property name="topMargin">
+     <number>2</number>
+    </property>
+    <property name="rightMargin">
+     <number>2</number>
+    </property>
+    <property name="bottomMargin">
+     <number>2</number>
+    </property>
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QMdiArea" name="mdiArea"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>871</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionEsci"/>
+   </widget>
+   <widget class="QMenu" name="menuGestione_Risorse">
+    <property name="title">
+     <string>Risorse</string>
+    </property>
+    <addaction name="actionAnagrafica"/>
+    <addaction name="actionAggiungi_Risorse"/>
+   </widget>
+   <widget class="QMenu" name="menuAvanzate">
+    <property name="title">
+     <string>Avanzate</string>
+    </property>
+    <addaction name="actionTabella_Matrici"/>
+    <addaction name="actionOpzioni"/>
+   </widget>
+   <widget class="QMenu" name="menuGestioni_Permessi">
+    <property name="title">
+     <string>Permessi</string>
+    </property>
+    <addaction name="actionPermessi"/>
+   </widget>
+   <widget class="QMenu" name="menuGestione_Turni">
+    <property name="title">
+     <string>Turni</string>
+    </property>
+    <addaction name="actionGenerazione_Tuno"/>
+    <addaction name="actionCarica_un_turno_da_un_foglio_excel"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuGestione_Risorse"/>
+   <addaction name="menuGestioni_Permessi"/>
+   <addaction name="menuGestione_Turni"/>
+   <addaction name="menuAvanzate"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionEsci">
+   <property name="text">
+    <string>Esci</string>
+   </property>
+  </action>
+  <action name="actionAnagrafica">
+   <property name="text">
+    <string>Modifica Anagrafica</string>
+   </property>
+  </action>
+  <action name="actionAggiungi_Risorse">
+   <property name="text">
+    <string>Aggiungi Risorse</string>
+   </property>
+  </action>
+  <action name="actionOpzioni">
+   <property name="text">
+    <string>Opzioni file esterni</string>
+   </property>
+  </action>
+  <action name="actionTabella_Matrici">
+   <property name="text">
+    <string>Tabella Matrici</string>
+   </property>
+  </action>
+  <action name="actionPermessi">
+   <property name="text">
+    <string>Inserisci e/o modifica Permessi</string>
+   </property>
+  </action>
+  <action name="actionCarica_un_turno_da_un_foglio_excel">
+   <property name="text">
+    <string>Carica un turno da un foglio excel...</string>
+   </property>
+  </action>
+  <action name="actionGenerazione_Tuno">
+   <property name="text">
+    <string>Generazione Turno ...</string>
+   </property>
+   <property name="font">
+    <font>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="10"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionEsci</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <designerdata>
+  <property name="gridDeltaX">
+   <number>10</number>
+  </property>
+  <property name="gridDeltaY">
+   <number>10</number>
+  </property>
+  <property name="gridSnapX">
+   <bool>true</bool>
+  </property>
+  <property name="gridSnapY">
+   <bool>true</bool>
+  </property>
+  <property name="gridVisible">
+   <bool>true</bool>
+  </property>
+ </designerdata>
+</ui>

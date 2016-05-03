@@ -1,0 +1,1 @@
+select  anagrafica.matricola,cognome, nome, turno, data from anagrafica join turnazione on anagrafica.matricola=turnazione.matricola where anagrafica.matricola=1 and datasqlite >= '2016-02-29' and datasqlite <= '2016-03-06' 
