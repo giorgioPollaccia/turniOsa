@@ -1,8 +1,8 @@
 #include "formgestioneferie.h"
 #include "ui_formgestioneferie.h"
 #include <QDebug>
-
-
+#include <QSqlTableModel>
+#include <QSqlError>
 
 FormGestioneFerie::FormGestioneFerie(QSqlDatabase db, QWidget *parent) :
     QWidget(parent),
@@ -31,14 +31,21 @@ FormGestioneFerie::FormGestioneFerie(QSqlDatabase db, QWidget *parent) :
 
 
 
-    QSqlQueryModel *model = new QSqlQueryModel;
-    QSqlQuery query2("Select tipoPermesso, data from permessi");
-
-    model->setQuery(query2);
-    model->setHeaderData(0, Qt::Horizontal, tr("Tipo Permesso"));
-    model->setHeaderData(1, Qt::Horizontal, tr("Data"));
-
+    QSqlTableModel *model = new QSqlTableModel(this, this->db);
+    model->setTable("assenze");
+    model->setEditStrategy(QSqlTableModel::OnFieldChange);
+    model->select();
+    model->setFilter(QString("Matricola=\"%1\"").arg(ui->cbMatricola->currentText()));
+    model->sort(2,Qt::AscendingOrder);
+    model->setHeaderData(1, Qt::Horizontal, tr("MATRICOLA"));
+    model->setHeaderData(2, Qt::Horizontal, tr("DATA"));
+    model->setHeaderData(3, Qt::Horizontal, tr("CAUSA"));
     ui->tvPermessi->setModel(model);
+    ui->tvPermessi->hideColumn(0);
+    ui->tvPermessi->resizeColumnsToContents();
+    ui->tvPermessi->resizeRowsToContents();
+    ui->tvPermessi->selectRow(0);
+
 
 }
 
@@ -96,6 +103,21 @@ void FormGestioneFerie::on_cbMatricola_currentIndexChanged(const QString &arg1)
     query1.next();
     ui->lNome->setText( query1.value(0).toString() );
 
+    QSqlTableModel *model = new QSqlTableModel(this, this->db);
+    model->setTable("assenze");
+    model->setEditStrategy(QSqlTableModel::OnFieldChange);
+    model->select();
+    model->setFilter(QString("Matricola=\"%1\"").arg(ui->cbMatricola->currentText()));
+
+    model->sort(2,Qt::AscendingOrder);
+      model->setHeaderData(1, Qt::Horizontal, tr("MATRICOLA"));
+      model->setHeaderData(2, Qt::Horizontal, tr("DATA"));
+      model->setHeaderData(3, Qt::Horizontal, tr("CAUSA"));
+      ui->tvPermessi->setModel(model);
+      ui->tvPermessi->hideColumn(0);
+      ui->tvPermessi->resizeColumnsToContents();
+      ui->tvPermessi->resizeRowsToContents();
+      ui->tvPermessi->selectRow(0);
 
 }
 
@@ -119,7 +141,7 @@ void FormGestioneFerie::on_pbAggiungiPermesso_clicked()
 
 
     QSqlQuery query;
-    query.prepare("INSERT INTO permessi (ID, matricola, tipoPermesso, data)" "VALUES (?, ?, ?, ?)");
+    query.prepare("INSERT INTO assenze (ID, matricola, causa, data)" "VALUES (?, ?, ?, ?)");
    // query.addBindValue( ui->cbMatricola->currentText()+"_"+ui->dePermessiDal->date().toString("dd/MM/yyyy"));
     query.addBindValue( ui->cbMatricola->currentText()+"_"+a.toString("dd/MM/yyyy"));
     query.addBindValue( ui->cbMatricola->currentText());
@@ -144,5 +166,59 @@ void FormGestioneFerie::on_pbAggiungiPermesso_clicked()
         msgBox.setIcon(QMessageBox::Critical);
         msgBox.exec();
     }
+
+    QSqlTableModel *model = new QSqlTableModel(this, this->db);
+    model->setTable("assenze");
+    model->setEditStrategy(QSqlTableModel::OnFieldChange);
+    model->select();
+    model->setFilter(QString("Matricola=\"%1\"").arg(ui->cbMatricola->currentText()));
+
+    model->sort(2,Qt::AscendingOrder);
+      model->setHeaderData(1, Qt::Horizontal, tr("MATRICOLA"));
+      model->setHeaderData(2, Qt::Horizontal, tr("DATA"));
+      model->setHeaderData(3, Qt::Horizontal, tr("CAUSA"));
+      ui->tvPermessi->setModel(model);
+      ui->tvPermessi->hideColumn(0);
+      ui->tvPermessi->resizeColumnsToContents();
+      ui->tvPermessi->resizeRowsToContents();
+      ui->tvPermessi->selectRow(0);
+
   }
+}
+
+void FormGestioneFerie::on_tvPermessi_doubleClicked(const QModelIndex &index)
+{
+
+    if(index.column()==2)
+    {
+        QMessageBox msgBox;
+        msgBox.setText("Cancella assenza programmata.");
+        msgBox.setInformativeText(QString("Cancellare l'assenza programmata di %2 per il giorno %1 ?").arg(index.data().toString()).arg(ui->cbCognome->currentText()));
+        msgBox.setStandardButtons(QMessageBox::Apply |QMessageBox::Discard  );
+        msgBox.setIcon(QMessageBox::Question);
+        int ret = msgBox.exec();
+        if (ret==QMessageBox::Apply )
+        {
+            QSqlQuery query(QString("DELETE FROM assenze where id=\"%1\"").arg(ui->cbMatricola->currentText()+"_"+index.data().toString()));
+            query.exec();
+            qDebug() << query.lastError();
+
+            QSqlTableModel *model = new QSqlTableModel(this, this->db);
+            model->setTable("assenze");
+            model->setEditStrategy(QSqlTableModel::OnFieldChange);
+            model->select();
+            model->setFilter(QString("Matricola=\"%1\"").arg(ui->cbMatricola->currentText()));
+
+            model->sort(2,Qt::AscendingOrder);
+            model->setHeaderData(1, Qt::Horizontal, tr("MATRICOLA"));
+            model->setHeaderData(2, Qt::Horizontal, tr("DATA"));
+            model->setHeaderData(3, Qt::Horizontal, tr("CAUSA"));
+            ui->tvPermessi->setModel(model);
+            ui->tvPermessi->hideColumn(0);
+            ui->tvPermessi->resizeColumnsToContents();
+            ui->tvPermessi->resizeRowsToContents();
+            ui->tvPermessi->selectRow(0);
+        }
+    }
+
 }

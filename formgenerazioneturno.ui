@@ -21,6 +21,9 @@
        <pointsize>7</pointsize>
       </font>
      </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
      <attribute name="horizontalHeaderVisible">
       <bool>false</bool>
      </attribute>

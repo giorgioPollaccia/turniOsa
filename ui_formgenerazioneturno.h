@@ -64,6 +64,7 @@ public:
         QFont font;
         font.setPointSize(7);
         tw->setFont(font);
+        tw->setSelectionBehavior(QAbstractItemView::SelectRows);
         tw->horizontalHeader()->setVisible(false);
         tw->verticalHeader()->setVisible(false);
 

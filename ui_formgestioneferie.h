@@ -21,6 +21,7 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QTableView>
+#include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -28,6 +29,8 @@ QT_BEGIN_NAMESPACE
 class Ui_FormGestioneFerie
 {
 public:
+    QGridLayout *gridLayout_3;
+    QVBoxLayout *verticalLayout;
     QGroupBox *groupBox;
     QGridLayout *gridLayout_2;
     QGridLayout *gridLayout;
@@ -45,17 +48,20 @@ public:
     QLabel *lNome;
     QComboBox *cbMatricola;
     QPushButton *pbAggiungiPermesso;
-    QTableView *tvPermessi;
     QLabel *label_3;
+    QTableView *tvPermessi;
 
     void setupUi(QWidget *FormGestioneFerie)
     {
         if (FormGestioneFerie->objectName().isEmpty())
             FormGestioneFerie->setObjectName(QStringLiteral("FormGestioneFerie"));
-        FormGestioneFerie->resize(758, 405);
+        FormGestioneFerie->resize(567, 447);
+        gridLayout_3 = new QGridLayout(FormGestioneFerie);
+        gridLayout_3->setObjectName(QStringLiteral("gridLayout_3"));
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         groupBox = new QGroupBox(FormGestioneFerie);
         groupBox->setObjectName(QStringLiteral("groupBox"));
-        groupBox->setGeometry(QRect(10, 20, 430, 165));
         QFont font;
         font.setBold(false);
         font.setWeight(50);
@@ -150,22 +156,30 @@ public:
 
         pbAggiungiPermesso = new QPushButton(groupBox);
         pbAggiungiPermesso->setObjectName(QStringLiteral("pbAggiungiPermesso"));
+        pbAggiungiPermesso->setFont(font1);
+        pbAggiungiPermesso->setDefault(true);
 
         gridLayout_2->addWidget(pbAggiungiPermesso, 1, 0, 1, 1);
 
-        tvPermessi = new QTableView(FormGestioneFerie);
-        tvPermessi->setObjectName(QStringLiteral("tvPermessi"));
-        tvPermessi->setGeometry(QRect(20, 190, 256, 192));
+
+        verticalLayout->addWidget(groupBox);
+
         label_3 = new QLabel(FormGestioneFerie);
         label_3->setObjectName(QStringLiteral("label_3"));
-        label_3->setGeometry(QRect(310, 180, 231, 131));
-        QFont font2;
-        font2.setFamily(QStringLiteral("MS PGothic"));
-        font2.setPointSize(24);
-        label_3->setFont(font2);
-        label_3->setAutoFillBackground(false);
-        label_3->setStyleSheet(QStringLiteral("color: rgb(255, 0, 0);"));
-        label_3->setWordWrap(true);
+        label_3->setFont(font1);
+
+        verticalLayout->addWidget(label_3);
+
+        tvPermessi = new QTableView(FormGestioneFerie);
+        tvPermessi->setObjectName(QStringLiteral("tvPermessi"));
+        tvPermessi->setAlternatingRowColors(true);
+        tvPermessi->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+        verticalLayout->addWidget(tvPermessi);
+
+
+        gridLayout_3->addLayout(verticalLayout, 0, 0, 1, 1);
+
 
         retranslateUi(FormGestioneFerie);
 
@@ -191,7 +205,10 @@ public:
         label_2->setText(QApplication::translate("FormGestioneFerie", "Cognome:", 0));
         lNome->setText(QApplication::translate("FormGestioneFerie", "Nome:", 0));
         pbAggiungiPermesso->setText(QApplication::translate("FormGestioneFerie", "Aggiungi permesso nel database", 0));
-        label_3->setText(QApplication::translate("FormGestioneFerie", "la tabella dovra contenere solo le ferie per la matricola scelta", 0));
+        label_3->setText(QApplication::translate("FormGestioneFerie", "Assenze (Ferie, malattie, ecc.) caricati nel database", 0));
+#ifndef QT_NO_TOOLTIP
+        tvPermessi->setToolTip(QString());
+#endif // QT_NO_TOOLTIP
     } // retranslateUi
 
 };

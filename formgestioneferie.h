@@ -39,6 +39,8 @@ private slots:
 
     void on_pbAggiungiPermesso_clicked();
 
+    void on_tvPermessi_doubleClicked(const QModelIndex &index);
+
 private:
     Ui::FormGestioneFerie *ui;
     QSqlDatabase db;
