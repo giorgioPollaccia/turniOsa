@@ -62,16 +62,16 @@ void formCaricaTurnoDaExcel::on_pbCaricaTurnoDaExcel_clicked()
        {
            //il formato della data che ritorna xlsx1 è "aaaa-mm-gg" invece a me serve gg/mm/aaaa
            qDebug() << "DATA: " << xlsx1.read(row_Data , col ).toString();
-           //dt= QString("%1/%2/%3").arg( xlsx1.read(row_Data , col ).toString().mid(8,2) )
-           //                               .arg( xlsx1.read(row_Data , col ).toString().mid(5,2) )
-           //                               .arg( xlsx1.read(row_Data , col ).toString().mid(0,4) );
-           dt= QString("%1").arg(xlsx1.read(row_Data , col ).toString());
+//           dt= QString("%1/%2/%3").arg( xlsx1.read(row_Data , col ).toString().mid(8,2) )
+//                                          .arg( xlsx1.read(row_Data , col ).toString().mid(5,2) )
+//                                          .arg( xlsx1.read(row_Data , col ).toString().mid(0,4) );
+          // dt= QString("%1").arg(xlsx1.read(row_Data , col ).toString());
            QString turno= xlsx1.read(row , col ).toString();
-           QDate Data= QDate::fromString(xlsx1.read(row_Data , col ).toString(), "dd/MM/yyyy");
+//           QDate Data= QDate::fromString(xlsx1.read(row_Data , col ).toString(), "dd/MM/yyyy");
+           QDate Data= QDate::fromString(xlsx1.read(row_Data , col ).toString(), "yyyy-MM-dd");
            int anno= Data.year();
            int week= Data.weekNumber();
-           qDebug() << dt << Data <<" "<<anno<<" "<<week<<" "
-                    <<  xlsx1.read(row , col ).toString();
+           qDebug() << dt << Data.toString("yyyy-MM-dd") <<" "<<anno<<" "<<week<<" " <<  xlsx1.read(row , col ).toString();
 
            col++;
 
