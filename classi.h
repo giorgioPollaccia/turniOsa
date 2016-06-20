@@ -1,3 +1,4 @@
+
 #ifndef CLASSI_H
 #define CLASSI_H
 #include <QString>

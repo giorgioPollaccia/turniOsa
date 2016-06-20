@@ -87,7 +87,7 @@ void formCaricaTurnoDaExcel::on_pbCaricaTurnoDaExcel_clicked()
                        queryUpdate.bindValue(":id", QString("%1_%2").arg(matricola).arg(Data.toString("yyyy-MM-dd")));
                        queryUpdate.bindValue(":matricola", matricola);
                        queryUpdate.bindValue(":idmatrice", "OSA_NOTTURNO");
-                       queryUpdate.bindValue(":progressivo", 1);
+                       queryUpdate.bindValue(":progressivo", 9999);
                        queryUpdate.bindValue(":data_lun", QString("%1").arg(Data.toString("yyyy-MM-dd")));
                        queryUpdate.bindValue(":week", week);
                        queryUpdate.bindValue(":anno", anno);

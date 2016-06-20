@@ -1650,7 +1650,7 @@ void FormGenerazioneTurno::on_cbreparti_currentTextChanged(const QString &arg1)
 
 void FormGenerazioneTurno::on_pbSalvaExcel_clicked()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, tr("Salva in excel file"), ".", tr("Excel File (*.xlsx)"));
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Salva in excel file"), ".", tr("Excel File (*.xlsx)"));
     QXlsx::Document  xlsx(fileName);
 
     for(int i=3; (i <= ui->tw->rowCount() )  ; i++)

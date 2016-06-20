@@ -137,6 +137,8 @@ Makefile: turniOSA.pro C:/Qt/Qt5.2.1/5.2.1/mingw48_32/mkspecs/win32-g++/qmake.co
 		C:/Qt/Qt5.2.1/5.2.1/mingw48_32/mkspecs/modules/qt_lib_widgets_private.pri \
 		C:/Qt/Qt5.2.1/5.2.1/mingw48_32/mkspecs/modules/qt_lib_winextras.pri \
 		C:/Qt/Qt5.2.1/5.2.1/mingw48_32/mkspecs/modules/qt_lib_winextras_private.pri \
+		C:/Qt/Qt5.2.1/5.2.1/mingw48_32/mkspecs/modules/qt_lib_xlsx.pri \
+		C:/Qt/Qt5.2.1/5.2.1/mingw48_32/mkspecs/modules/qt_lib_xlsx_private.pri \
 		C:/Qt/Qt5.2.1/5.2.1/mingw48_32/mkspecs/modules/qt_lib_xml.pri \
 		C:/Qt/Qt5.2.1/5.2.1/mingw48_32/mkspecs/modules/qt_lib_xml_private.pri \
 		C:/Qt/Qt5.2.1/5.2.1/mingw48_32/mkspecs/modules/qt_lib_xmlpatterns.pri \
@@ -248,6 +250,8 @@ C:\Qt\Qt5.2.1\5.2.1\mingw48_32\mkspecs\modules\qt_lib_widgets.pri:
 C:\Qt\Qt5.2.1\5.2.1\mingw48_32\mkspecs\modules\qt_lib_widgets_private.pri:
 C:\Qt\Qt5.2.1\5.2.1\mingw48_32\mkspecs\modules\qt_lib_winextras.pri:
 C:\Qt\Qt5.2.1\5.2.1\mingw48_32\mkspecs\modules\qt_lib_winextras_private.pri:
+C:\Qt\Qt5.2.1\5.2.1\mingw48_32\mkspecs\modules\qt_lib_xlsx.pri:
+C:\Qt\Qt5.2.1\5.2.1\mingw48_32\mkspecs\modules\qt_lib_xlsx_private.pri:
 C:\Qt\Qt5.2.1\5.2.1\mingw48_32\mkspecs\modules\qt_lib_xml.pri:
 C:\Qt\Qt5.2.1\5.2.1\mingw48_32\mkspecs\modules\qt_lib_xml_private.pri:
 C:\Qt\Qt5.2.1\5.2.1\mingw48_32\mkspecs\modules\qt_lib_xmlpatterns.pri:
