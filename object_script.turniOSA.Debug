@@ -39,6 +39,7 @@ INPUT(
 ./debug\formcalendario.o
 ./debug\formcaricaturnodaexcel.o
 ./debug\formgenerazioneturno.o
+./debug\formorelavorateperdipendente.o
 ./debug\moc_xlsxdocument.o
 ./debug\moc_mainwindow.o
 ./debug\moc_formanagrafica.o
@@ -49,4 +50,5 @@ INPUT(
 ./debug\moc_formcalendario.o
 ./debug\moc_formcaricaturnodaexcel.o
 ./debug\moc_formgenerazioneturno.o
+./debug\moc_formorelavorateperdipendente.o
 );

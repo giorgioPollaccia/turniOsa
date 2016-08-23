@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     formgestioneferie.cpp \
     formcalendario.cpp \
     formcaricaturnodaexcel.cpp \
-    formgenerazioneturno.cpp
+    formgenerazioneturno.cpp \
+    formorelavorateperdipendente.cpp
 
 HEADERS  += mainwindow.h \
     formanagrafica.h \
@@ -36,7 +37,8 @@ HEADERS  += mainwindow.h \
     formgestioneferie.h \
     formcalendario.h \
     formcaricaturnodaexcel.h \
-    formgenerazioneturno.h
+    formgenerazioneturno.h \
+    formorelavorateperdipendente.h
 
 FORMS    += mainwindow.ui \
     formanagrafica.ui \
@@ -46,4 +48,5 @@ FORMS    += mainwindow.ui \
     formgestioneferie.ui \
     formcalendario.ui \
     formcaricaturnodaexcel.ui \
-    formgenerazioneturno.ui
+    formgenerazioneturno.ui \
+    formorelavorateperdipendente.ui

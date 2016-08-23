@@ -39,6 +39,7 @@ INPUT(
 ./release\formcalendario.o
 ./release\formcaricaturnodaexcel.o
 ./release\formgenerazioneturno.o
+./release\formorelavorateperdipendente.o
 ./release\moc_xlsxdocument.o
 ./release\moc_mainwindow.o
 ./release\moc_formanagrafica.o
@@ -49,4 +50,5 @@ INPUT(
 ./release\moc_formcalendario.o
 ./release\moc_formcaricaturnodaexcel.o
 ./release\moc_formgenerazioneturno.o
+./release\moc_formorelavorateperdipendente.o
 );

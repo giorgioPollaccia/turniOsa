@@ -205,3 +205,25 @@ void MainWindow::on_actionGenerazione_Tuno_triggered()
 //           fGenerazioneTurno->show();
 //       }
 //}
+
+
+
+void MainWindow::on_actionReport_generale_triggered()
+{
+    bool isOpen= false;
+    foreach (QMdiSubWindow *window, ui->mdiArea->subWindowList())
+    {
+      if (window->windowTitle().contains("Report generale") )
+      {
+          ui->mdiArea->setActiveSubWindow(window);
+          isOpen= true;
+      }
+    }
+    if (! isOpen )
+    {
+         FormOreLavoratePerDipendente *fOreLavoratePerDipendente= new FormOreLavoratePerDipendente(db);
+         fOreLavoratePerDipendente->setAttribute(Qt::WA_DeleteOnClose);
+         ui->mdiArea->addSubWindow(fOreLavoratePerDipendente);
+         fOreLavoratePerDipendente->show();
+    }
+}

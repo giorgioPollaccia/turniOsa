@@ -77,10 +77,17 @@
     <addaction name="actionGenerazione_Tuno"/>
     <addaction name="actionCarica_un_turno_da_un_foglio_excel"/>
    </widget>
+   <widget class="QMenu" name="menuReport">
+    <property name="title">
+     <string>Report</string>
+    </property>
+    <addaction name="actionReport_generale"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuGestione_Risorse"/>
    <addaction name="menuGestioni_Permessi"/>
    <addaction name="menuGestione_Turni"/>
+   <addaction name="menuReport"/>
    <addaction name="menuAvanzate"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -136,6 +143,11 @@
      <weight>75</weight>
      <bold>true</bold>
     </font>
+   </property>
+  </action>
+  <action name="actionReport_generale">
+   <property name="text">
+    <string>Report generale</string>
    </property>
   </action>
  </widget>

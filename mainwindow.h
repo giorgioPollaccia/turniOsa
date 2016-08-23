@@ -10,6 +10,7 @@
 #include "formgestioneferie.h"
 #include "formcaricaturnodaexcel.h"
 #include "formgenerazioneturno.h"
+#include "formorelavorateperdipendente.h"
 
 namespace Ui {
 class MainWindow;
@@ -38,7 +39,8 @@ private slots:
 
     void on_actionGenerazione_Tuno_triggered();
 
-    
+    void on_actionReport_generale_triggered();
+
 private:
     Ui::MainWindow *ui;
 
@@ -50,7 +52,7 @@ private:
     FormGestioneFerie *fGestioneFerie;
     formCaricaTurnoDaExcel *fCaricaTurnoDaExcel;
     FormGenerazioneTurno *fGenerazioneTurno;
-
+    FormOreLavoratePerDipendente *fOreLavoratePerDipendente;
     QSqlDatabase db;
 signals:
   void signal_rinfrescaDati();
