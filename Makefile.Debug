@@ -557,6 +557,8 @@ debug/moc_mainwindow.cpp: C:/Qt/5.5/mingw492_32/include/QtWidgets/QMainWindow \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qcheckbox.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QComboBox \
+		formorelavorateperdipendente.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QTime \
 		mainwindow.h
 	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -ID:/GIT_REPOSITORY/turniOsa -IC:/Qt/QtXlsxWriter-master/src/xlsx -IC:/Qt/5.5/mingw492_32/include/QtGui/5.5.1 -IC:/Qt/5.5/mingw492_32/include/QtGui/5.5.1/QtGui -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore mainwindow.h -o debug\moc_mainwindow.cpp
 
@@ -1743,6 +1745,48 @@ debug/moc_formorelavorateperdipendente.cpp: C:/Qt/5.5/mingw492_32/include/QtWidg
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlRelationalTableModel \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlrelationaltablemodel.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqltablemodel.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquerymodel.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlRecord \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlrecord.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDataWidgetMapper \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdatawidgetmapper.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlRelationalDelegate \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlrelationaldelegate.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qitemdelegate.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qicon.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlistview.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qcombobox.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlQuery \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QMessageBox \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QDebug \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QTime \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdatetime.h \
+		formcalendario.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QDate \
 		formorelavorateperdipendente.h
 	C:\Qt\5.5\mingw492_32\bin\moc.exe $(DEFINES) -D__GNUC__ -DWIN32 -IC:/Qt/5.5/mingw492_32/mkspecs/win32-g++ -ID:/GIT_REPOSITORY/turniOsa -IC:/Qt/QtXlsxWriter-master/src/xlsx -IC:/Qt/5.5/mingw492_32/include/QtGui/5.5.1 -IC:/Qt/5.5/mingw492_32/include/QtGui/5.5.1/QtGui -IC:/Qt/5.5/mingw492_32/include -IC:/Qt/5.5/mingw492_32/include/QtWidgets -IC:/Qt/5.5/mingw492_32/include/QtGui -IC:/Qt/5.5/mingw492_32/include/QtANGLE -IC:/Qt/5.5/mingw492_32/include/QtSql -IC:/Qt/5.5/mingw492_32/include/QtCore formorelavorateperdipendente.h -o debug\moc_formorelavorateperdipendente.cpp
 
@@ -4700,6 +4744,8 @@ debug/main.o: main.cpp mainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qcheckbox.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QComboBox \
+		formorelavorateperdipendente.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QTime \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QApplication \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/qcoreapplication.h \
@@ -4875,6 +4921,8 @@ debug/mainwindow.o: mainwindow.cpp mainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qcheckbox.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QComboBox \
+		formorelavorateperdipendente.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QTime \
 		ui_mainwindow.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
@@ -6467,11 +6515,52 @@ debug/formorelavorateperdipendente.o: formorelavorateperdipendente.cpp formorela
 		C:/Qt/5.5/mingw492_32/include/QtCore/qfiledevice.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qvector2d.h \
 		C:/Qt/5.5/mingw492_32/include/QtGui/qtouchdevice.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlRelationalTableModel \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlrelationaltablemodel.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqltablemodel.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqldatabase.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsql.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquerymodel.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlRecord \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlrecord.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDataWidgetMapper \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdatawidgetmapper.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlRelationalDelegate \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlrelationaldelegate.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qitemdelegate.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
+		C:/Qt/5.5/mingw492_32/include/QtGui/qicon.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlistview.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qcombobox.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlQuery \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlquery.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QMessageBox \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qmessagebox.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdialog.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QDebug \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QTime \
+		C:/Qt/5.5/mingw492_32/include/QtCore/qdatetime.h \
+		formcalendario.h \
+		C:/Qt/5.5/mingw492_32/include/QtCore/QDate \
 		ui_formorelavorateperdipendente.h \
 		C:/Qt/5.5/mingw492_32/include/QtCore/QVariant \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QAction \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qaction.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qicon.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qactiongroup.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QApplication \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qapplication.h \
@@ -6482,24 +6571,30 @@ debug/formorelavorateperdipendente.o: formorelavorateperdipendente.cpp formorela
 		C:/Qt/5.5/mingw492_32/include/QtGui/qinputmethod.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QButtonGroup \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qbuttongroup.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QDateEdit \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qdatetimeedit.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QGridLayout \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qgridlayout.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayout.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlayoutitem.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qboxlayout.h \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/QHeaderView \
 		C:/Qt/5.5/mingw492_32/include/QtWidgets/qheaderview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemview.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractscrollarea.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qframe.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qabstractitemmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qitemselectionmodel.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractitemdelegate.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyleoption.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractspinbox.h \
-		C:/Qt/5.5/mingw492_32/include/QtGui/qvalidator.h \
-		C:/Qt/5.5/mingw492_32/include/QtCore/qregularexpression.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractslider.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qstyle.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabbar.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtabwidget.h \
-		C:/Qt/5.5/mingw492_32/include/QtWidgets/qrubberband.h
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QLabel \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qlabel.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QPushButton \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qpushbutton.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qabstractbutton.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QRadioButton \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qradiobutton.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QSpacerItem \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QSplitter \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qsplitter.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/QTableWidget \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtablewidget.h \
+		C:/Qt/5.5/mingw492_32/include/QtWidgets/qtableview.h \
+		C:/Qt/5.5/mingw492_32/include/QtSql/QSqlError \
+		C:/Qt/5.5/mingw492_32/include/QtSql/qsqlerror.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o debug\formorelavorateperdipendente.o formorelavorateperdipendente.cpp
 
 debug/moc_xlsxdocument.o: debug/moc_xlsxdocument.cpp 
