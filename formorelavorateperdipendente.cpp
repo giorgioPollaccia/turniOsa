@@ -3,6 +3,7 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QTime>
+#include "xlsxdocument.h"
 
 FormOreLavoratePerDipendente::FormOreLavoratePerDipendente(QSqlDatabase db, QWidget *parent) :
     QWidget(parent),
@@ -136,11 +137,11 @@ void FormOreLavoratePerDipendente::on_deAl_dateChanged(const QDate &date)
 
 void FormOreLavoratePerDipendente::on_rbOreEffettuate_clicked()
 {
-    ui->tw->setColumnCount(ui->tw->columnCount()+1);
+ //   ui->tw->setColumnCount(ui->tw->columnCount()+1);
     for(int riga=1; riga< ui->tw->rowCount();riga++)
     {
         int minutiTotaliNelPeriodo= 0;
-        for(int colonna=3; colonna< ui->tw->columnCount()-1;colonna++)
+        for(int colonna=3; colonna< ui->tw->columnCount();colonna++)
         {
             QString turno= ui->tw->item(riga, colonna)->text();
             if (turno =="")
@@ -152,7 +153,7 @@ void FormOreLavoratePerDipendente::on_rbOreEffettuate_clicked()
             for (int k=0; k< turniDay.count(); k++)
             {
                 //qDebug() << turniDay.at(k);
-                if ( (turniDay.at(k)=="M") || (turniDay.at(k)=="P") )
+                if ( (turniDay.at(k)=="M") || (turniDay.at(k)=="P") || (turniDay.at(k)=="F")  )
                      minutiFatti += 420;
                 else
                     if ( (turniDay.at(k)=="M1") || (turniDay.at(k)=="P1") )
@@ -174,9 +175,34 @@ void FormOreLavoratePerDipendente::on_rbOreEffettuate_clicked()
         int oreTotaliNelPeriodo= minutiTotaliNelPeriodo / 60;
         int minTotaliNelPeriodo= minutiTotaliNelPeriodo % 60;
 
-        ui->tw->setItem(riga, ui->tw->columnCount()-1,new QTableWidgetItem(QString("%1:%2").arg(oreTotaliNelPeriodo,2,10,0,'0').arg(minTotaliNelPeriodo,2,10,0,'0')));
+       // ui->tw->setItem(riga, ui->tw->columnCount()-1,new QTableWidgetItem(QString("%1:%2").arg(oreTotaliNelPeriodo,2,10,0,'0').arg(minTotaliNelPeriodo,2,10,0,'0')));
     }
 
     ui->tw->resizeColumnsToContents();
     ui->tw->resizeRowsToContents();
+}
+
+void FormOreLavoratePerDipendente::on_pbSalvaExcel_clicked()
+{
+    QString fileName = QFileDialog::getSaveFileName(this, tr("Salva in excel file"), ".", tr("Excel File (*.xlsx)"));
+    if (!fileName.isEmpty())
+    {
+         qDebug() << fileName;
+        QXlsx::Document  xlsx(fileName);
+
+        for(int i=1; (i <= ui->tw->rowCount() )  ; i++)
+        {
+            for(int j=1; (j <= ui->tw->columnCount() )  ; j++)
+            {
+                qDebug() << ui->tw->item(i-1,j-1)->text();
+                xlsx.write(i,j, ui->tw->item(i-1,j-1)->text());
+            }
+            // for(int j=2; (j < ui->tw->columnCount()-3 )  ; j++)
+            // {
+            //      xlsx.write(i,j, ui->tw->item(i-1,j+3)->text());
+            // }
+        }
+
+        xlsx.save();
+     }
 }

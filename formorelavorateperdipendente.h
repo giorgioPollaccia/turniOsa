@@ -12,6 +12,9 @@
 #include <QDebug>
 #include <QTime>
 
+#include <QMessageBox>
+#include <QFileDialog>
+
 #include "formcalendario.h"
 
 namespace Ui {
@@ -35,6 +38,8 @@ private slots:
     void on_deAl_dateChanged(const QDate &date);
 
     void on_rbOreEffettuate_clicked();
+
+    void on_pbSalvaExcel_clicked();
 
 private:
     Ui::FormOreLavoratePerDipendente *ui;
